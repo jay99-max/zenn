@@ -9,18 +9,18 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-16 bg-[#451a03] text-white">  /* Deeper brown bg */
+    <section className="py-16 bg-gray-50">  /* Normal light gray bg */
       <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8 text-center">
         {stats.map((s, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1, type: "spring", stiffness: 400 }}
+            transition={{ delay: i * 0.1 }}
             className="scale-hover"
           >
-            <div className="heading text-4xl mb-2">{s.value}</div>
-            <div className="text-[#f5e6d3]">{s.label}</div>
+            <div className="heading text-4xl text-[#451a03] mb-2 fade-in">{s.value}</div>
+            <div className="text-gray-600">{s.label}</div>
           </motion.div>
         ))}
       </div>
