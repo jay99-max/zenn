@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&family=Inter:wght@400;600&family=Playfair+Display:ital@1&display=swap');
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900;
+    background-color: #fdf8f3;
+    font-family: 'Inter', sans-serif;
+  }
+  .heading { font-family: 'Instrument Sans', sans-serif; font-weight: 700; }
+  .quote   { font-family: 'Playfair Display', serif; font-style: italic; }
+}
