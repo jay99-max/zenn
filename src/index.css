@@ -29,3 +29,19 @@
   .scale-hover { transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   .scale-hover:hover { transform: scale(1.05); }
 }
+
+@layer components {
+
+  .btn-primary {
+    @apply inline-block bg-[#451a03] text-white font-semibold px-10 py-5 rounded-full shadow-xl transition-all duration-300 ease-out hover:bg-[#5c2a0a] hover:shadow-2xl hover:scale-105 hover:-translate-y-1;
+  }
+}
+  .btn-primary:hover {
+    @apply bg-[#5c2a0a] shadow-2xl scale-105 -translate-y-1;
+  }
+  .btn-secondary {
+    @apply inline-block bg-transparent border-2 border-[#451a03] text-[#451a03] font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300 ease-out;
+  }
+  .btn-secondary:hover {
+    @apply bg-[#451a03] text-white shadow-2xl scale-105 -translate-y-1;
+  }

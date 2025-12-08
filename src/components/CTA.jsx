@@ -19,12 +19,9 @@ export default function CTA() {
         >
           Let ZENN CONSTRUCTION LTD transform your vision into reality.
         </motion.p>
-        <Link
-          to="/contact"
-          className="inline-block bg-brown-accent text-white px-8 py-4 rounded-md hover-brown transition shadow-md scale-hover"
-        >
-          Reach Out
-        </Link>
+      <Link to="/contact" className="btn-primary text-xl">
+  Reach Out
+</Link>
       </div>
     </section>
   )

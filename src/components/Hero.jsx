@@ -40,12 +40,11 @@ export default function Hero() {
           transition={{ delay: 0.9 }}
           className="scale-hover"
         >
-          <Link
-            to="/contact"
-            className="inline-block bg-brown-accent text-white px-10 py-5 rounded-full text-xl font-bold hover-brown transition shadow-2xl"
-          >
-            Start Your Project
-          </Link>
+<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
+  <Link to="/contact" className="btn-primary text-xl">
+    Let's Talk About Your Project
+  </Link>
+</motion.div>
         </motion.div>
       </div>
     </section>

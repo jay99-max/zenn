@@ -23,9 +23,9 @@ export default function Contact() {
           <input required type="email" placeholder="Email *" value={form.email} onChange={e=>setForm({...form,email:e.target.value})} className="w-full p-4 border rounded" />
           <input placeholder="Phone" value={form.phone} onChange={e=>setForm({...form,phone:e.target.value})} className="w-full p-4 border rounded" />
           <textarea required rows={5} placeholder="Your project *" value={form.message} onChange={e=>setForm({...form,message:e.target.value})} className="w-full p-4 border rounded"></textarea>
-          <button type="submit" className="w-full bg-blue-700 text-white py-4 rounded font-bold hover:bg-blue-800 transition">
-            Send Message
-          </button>
+         <button type="submit" className="btn-primary text-xl">
+  Send Message
+</button>
         </form>
       </div>
     </section>

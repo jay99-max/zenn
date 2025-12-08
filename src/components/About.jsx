@@ -19,9 +19,9 @@ export default function About() {
           With over 14 years of experience, we redefine construction as seamless and enjoyable. 
           Our hand-selected team focuses on mindfulness and care, ensuring reliability and safety.
         </motion.p>
-        <a href="/contact" className="inline-block bg-blue-700 text-white px-8 py-4 rounded-md hover:bg-blue-800 transition shadow-md">
-          Let's Talk About Your Project
-        </a>
+      <a href="/contact" className="btn-primary">
+  Let's Talk About Your Project
+</a>
       </div>
     </section>
   )
