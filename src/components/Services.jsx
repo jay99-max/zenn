@@ -10,19 +10,19 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-brown-main">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="heading text-3xl text-center mb-4 text-gray-900"
+          className="heading text-3xl text-center mb-4 text-[#1c1917] fade-in"
         >
           Comprehensive Services
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="text-center mb-12 max-w-3xl mx-auto text-gray-600"
+          className="text-center mb-12 max-w-3xl mx-auto text-gray-600 slide-in"
         >
           ZENN CONSTRUCTION LTD is your one-stop shop for all your building and construction needs. No job is too big or small.
         </motion.p>
@@ -30,17 +30,24 @@ export default function Services() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((s, i) => (
             <motion.div
-  key={i}
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ delay: i * 0.1 }}
-  className="bg-[#5c2a0a]/10 p-8 rounded-2xl hover:bg-[#5c2a0a]/20 transition backdrop-blur-sm border border-[#5c2a0a]/20"
->
-  <h3 className="heading text-2xl mb-4 text-[#451a03]">{s.title}</h3>
-  <p className="text-[#1c1917]/80">{s.desc}</p>
-</motion.div>
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, type: "spring", stiffness: 300 }}
+              className="bg-brown-card p-8 rounded-xl shadow-md hover:shadow-xl hover-brown transition-all duration-500 scale-hover"
+            >
+              <h3 className="heading text-xl mb-4 text-[#451a03] fade-in">{s.title}</h3>
+              <p className="text-[#1c1917]/80">{s.desc}</p>
+            </motion.div>
           ))}
         </div>
+        <motion.p 
+          initial={{ opacity: 0 }} 
+          whileInView={{ opacity: 1 }} 
+          className="text-center mt-12 text-gray-500 slide-in"
+        >
+          ...and everything else: Plumbing & Electrics, Groundwork & Brickwork, Plastering & Rendering, Decorating, Handyman Service, 24/7 Callout.
+        </motion.p>
       </div>
     </section>
   )

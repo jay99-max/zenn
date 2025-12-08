@@ -4,10 +4,28 @@
 
 @layer base {
   body {
-    @apply antialiased text-gray-900;
-    background-color: #fdf8f3;
+    @apply antialiased text-[#1c1917];  /* Dark brown text */
+    background-color: #fdf8f3;  /* Deeper brown off-white */
     font-family: 'Inter', sans-serif;
   }
   .heading { font-family: 'Instrument Sans', sans-serif; font-weight: 700; }
-  .quote   { font-family: 'Playfair Display', serif; font-style: italic; }
+  .quote { font-family: 'Playfair Display', serif; font-style: italic; }
+}
+
+@layer utilities {
+  /* Brown Palette */
+  .bg-brown-main { background-color: #fdf8f3; }  /* Deeper main bg */
+  .bg-brown-light { background-color: #f5e6d3; }  /* Light sections */
+  .bg-brown-card { background-color: #5c2a0a0d; }  /* Subtle card tint */
+  .bg-brown-accent { background-color: #451a03; }  /* Buttons/links */
+  .hover-brown { transition: all 0.3s ease; }
+  .hover-brown:hover { background-color: #5c2a0a; transform: scale(1.02); }
+
+  /* Modern 2025 Animations (fun, smooth) */
+  .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .slide-in { animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+  @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+  .scale-hover { transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .scale-hover:hover { transform: scale(1.05); }
 }
