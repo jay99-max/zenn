@@ -14,7 +14,7 @@ export default function FAQs() {
   ]
 
   return (
-    <section id="faqs" className="py-20 bg-gray-50">  /* Normal light gray bg */
+    <section id="faqs" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

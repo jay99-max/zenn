@@ -9,7 +9,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-16 bg-gray-50">  /* Normal light gray bg */
+    <section className="py-16 bg-gray-50">  
       <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8 text-center">
         {stats.map((s, i) => (
           <motion.div

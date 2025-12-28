@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-white text-center">  /* Normal white bg */
+    <section className="py-20 bg-white text-center"> 
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
