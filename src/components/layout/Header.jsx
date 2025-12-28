@@ -16,7 +16,6 @@ export default function Header() {
     { name: 'Contact', id: '/contact' },
   ]
 
-  // Smooth scroll when hash changes
   useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash)
@@ -36,11 +35,16 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-white shadow-sm z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="heading text-2xl text-[#451a03] font-bold">
-          ZENN CONSTRUCTION LTD
+        {/* LOGO REPLACE TEXT */}
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/logo.png" 
+            alt="ZENN CONSTRUCTION LTD" 
+            className="h-14 md:h-16 w-auto object-contain" 
+          />
         </Link>
 
-        {/* Desktop */}
+        {/* Desktop Nav */}
         <nav className="hidden lg:flex space-x-10">
           {links.map((link) => (
             <Link
@@ -54,13 +58,13 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
+        {/* Mobile Menu Button */}
         <button onClick={() => setOpen(!open)} className="lg:hidden">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden bg-white border-t">
           {links.map((link) => (
